@@ -1,0 +1,11 @@
+name = "buzz"
+license = "MIT"
+licenselink = "https://github.com/ademilter/buzz/blob/master/LICENSE.md"
+description = "An elegant open source and mobile first theme"
+tags = ["blog"]
+features = ["blog", "themes"]
+min_version = 0.1
+
+[author]
+    name = "ademilter"
+    homepage = "https://ademilter.com"
