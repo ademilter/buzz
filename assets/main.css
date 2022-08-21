@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Manrope VF';
+    src: url('/Manrope[wght].woff2') format("woff2-variations");
+    font-style: normal;
+    font-display: swap;
+    font-variation-settings: "wght" 500;
+    font-variation-ligatures: normal;
+    font-weight: 200 800;
+  }
+
+  html {
+    letter-spacing: calc(-.0305797101em + .4463768116px);
+  }
+
+}

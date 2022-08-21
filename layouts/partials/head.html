@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html {{ with $.Site.LanguageCode }}lang="{{ . }}"{{ end }}>
+<html
+  {{ with $.Site.LanguageCode }}lang="{{ . }}"{{ end }}
+  class="scroll-smooth text-lg antialiased dark:bg-zinc-900 dark:text-zinc-100"
+>
   <head>
     <meta charset="utf-8" />
     {{ hugo.Generator }}

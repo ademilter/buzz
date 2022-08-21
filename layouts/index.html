@@ -1,19 +1,20 @@
 {{ define "main" }}
-  <div class="bg-blue-50 p-5">
-    <mark>index</mark>
-
-    {{ $t := .Site.GetPage "/posts" }}
-    {{ range $t.Pages }}
-      <article class="post">
-        <h1 class="post-title">
+  <div class="space-y-6 p-5">
+    {{ range where .Site.RegularPages "Type" "posts" }}
+      <article class="">
+        <h1 class="text-xl font-bold">
           <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h1>
 
-        <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+        <div class="flex gap-4">
+          <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+          <span>{{ .WordCount }} Words</span>
+        </div>
 
-        {{ .Summary }}
+        <p>{{ .Summary }}</p>
+
         {{ if .Truncated }}
-          <div class="read-more-link">
+          <div class="text-blue-500 underline">
             <a href="{{ .RelPermalink }}">Read More…</a>
           </div>
         {{ end }}

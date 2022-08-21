@@ -1,16 +1,14 @@
 {{ define "main" }}
-  <article class="bg-indigo-100 p-5">
-    <mark>posts/single</mark>
-
+  <article class="prose prose-zinc p-5 dark:prose-invert">
     <header>
       <h1>{{ .Title }}</h1>
 
-      <div>posts</div>
-
-      <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
-      <span>{{ .WordCount }} Words</span>
+      <div class="flex gap-4">
+        <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+        <span>{{ .WordCount }} Words</span>
+      </div>
     </header>
 
-    <div class="post-body font-serif">{{ .Content }}</div>
+    <div class="">{{ .Content }}</div>
   </article>
 {{ end }}
