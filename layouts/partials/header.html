@@ -1,21 +1,15 @@
-<aside class="bg-gray-100 dark:bg-zinc-800 p-5">
-
-  <div class="">
+<header class="mb-10 pt-4">
+  <div class="mx-auto max-w-screen-md px-6">
     <a href="{{ .Site.BaseURL }}">
       <h1>{{ .Site.Title }}</h1>
     </a>
+
     <p class="lead">
-      {{ with .Site.Params.description }}{{.}}{{ else }}test{{end}}
+      {{ with .Site.Params.description }}
+        {{ . }}
+      {{ else }}
+        test
+      {{ end }}
     </p>
   </div>
-
-  <!-- <nav>
-    <ul class="sidebar-nav">
-      <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-      {{ range .Site.Menus.main -}}
-      <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-      {{- end }}
-    </ul>
-  </nav> -->
-  </div>
-</aside>
+</header>

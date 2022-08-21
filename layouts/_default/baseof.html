@@ -1,11 +1,13 @@
 {{ partial "head.html" . }}
 
-<body class="">
+<body>
 {{ partial "header.html" . }}
 
-<main class="content container">
-  {{ block "main" . }}{{ end }}
-</main>
+<div class="mx-auto max-w-screen-md px-6">
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+</div>
 
 {{ if not .Site.IsServer }}
 {{ template "_internal/google_analytics_async.html" . }}
