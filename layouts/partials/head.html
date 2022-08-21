@@ -39,12 +39,16 @@
     />
     <link rel="shortcut icon" href="/favicon.png" />
 
-    <!-- rss etc -->
-    {{ range .AlternativeOutputFormats }}
-      {{ printf `
-        <link href="%s" rel="%s" type="%s" title="%s" />
-        ` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML
-      }}
+    <!-- rss -->
+    {{ if .OutputFormats.Get "rss" }}
+      {{ with .OutputFormats.Get "rss" }}
+        <link
+          rel="{{ .Rel }}"
+          type="{{ .MediaType.Type }}"
+          href="{{ .Permalink }}"
+          title="{{ $.Site.Title | safeHTML }}"
+        />
+      {{ end }}
     {{ end }}
   </head>
 </html>
