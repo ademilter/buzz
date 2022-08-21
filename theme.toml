@@ -9,3 +9,6 @@ min_version = 0.1
 [author]
     name = "ademilter"
     homepage = "https://ademilter.com"
+
+[params]
+  description = "Your custom description"

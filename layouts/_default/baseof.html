@@ -4,11 +4,11 @@
   {{ partial "sidebar.html" . }}
 
   <main class="content container">
-    {{ block "main" . -}}{{- end }}
+    {{ block "main" . }}{{ end }}
   </main>
 
   {{ if not .Site.IsServer }}
-  {{ template "_internal/google_analytics.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
   {{ end }}
 </body>
 

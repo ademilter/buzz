@@ -1,12 +1,12 @@
 # Buzz
 
-Hyde is a [hugo](https://gohugo.io) theme
+Buzz is a [hugo](https://gohugo.io) theme
 
 ## Installation
 
 ### Standard Installation
 
-To install Hyde as your default theme, first install this repository in the `themes/` directory:
+To install Buzz as your default theme, first install this repository in the `themes/` directory:
 
     $ cd themes/
     $ git clone https://github.com/ademilter/buzz.git
@@ -29,12 +29,10 @@ googleAnalytics: Your tracking code
 ```
 
 ## Author
-**Mark Otto**
+**Adem ilter**
 - <https://github.com/ademilter>
 - <https://twitter.com/ademilter>
 
 ## License
 
 Open sourced under the [MIT license](LICENSE.md).
-
-<3

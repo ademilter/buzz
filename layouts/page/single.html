@@ -1,0 +1,15 @@
+{{ define "main" }}
+<div class="posts">
+ 
+  <h1 class="">
+    {{ .Title }}
+  </h1>
+
+  <div class="">
+    {{ .Content }}
+  </div>
+
+  {{ $.Param "text_color" | default "mid-gray" }}
+
+</div>
+{{ end }}
