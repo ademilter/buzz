@@ -1,6 +1,7 @@
 # Ignore docs files
 config.yaml
 config.toml
+public/
 
 # Numerous always-ignore extensions
 *.diff

@@ -3,10 +3,8 @@
   <header>
     <h1>{{ .Title }}</h1>
 
-    <div>default</div>
-
-    <h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
-    <h5 id="wordcount"> {{ .WordCount }} Words </h5>
+    <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
+    <h5> {{ .WordCount }} Words </h5>
   </header>
 
   <div class="post-body font-serif">
