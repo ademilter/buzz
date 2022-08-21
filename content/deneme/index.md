@@ -1,0 +1,7 @@
+---
+title: "Page - 1"
+date: 2022-08-20T22:41:07+03:00
+text_color: "mavi"
+---
+
+merhaba dasf fsf

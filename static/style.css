@@ -589,6 +589,11 @@ video {
   display: block;
 }
 
+.bg-gray-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .font-serif {
   font-family: IBM Plex Serif, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
