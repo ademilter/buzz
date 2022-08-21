@@ -1,3 +1,5 @@
+.hugo_build.lock
+go.mod
 config.yaml
 config.toml
 node_modules
