@@ -1,6 +1,7 @@
 ---
 title: "Post - 2"
 date: 2022-08-20T22:41:07+03:00
+tags: [test]
 ---
 
 The Hugo-defined summaries are set to use word count calculated by splitting the text by one or more consecutive whitespace characters.

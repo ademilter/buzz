@@ -4,19 +4,23 @@
   class="scroll-smooth text-lg antialiased dark:bg-zinc-900 dark:text-zinc-100"
 >
   <head>
-    <meta charset="utf-8" />
     {{ hugo.Generator }}
-
-
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="preload"
+      href="{{ $.Site.BaseURL }}Manrope[wght].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin="anonymous"
+    />
 
     {{ if .IsHome }}
       <title>{{ $.Site.Title }}</title>
     {{ else }}
       <title>{{ .Title }} &middot; {{ $.Site.Title }}</title>
     {{ end }}
-
-
     <meta
       name="description"
       content="{{ default $.Site.Params.description .Params.description }}"
@@ -28,8 +32,6 @@
       rel="stylesheet"
       href="{{ $.Site.BaseURL }}style.css"
     />
-    {{ partial "head_fonts.html" . }}
-
 
     <!-- icons -->
     <link

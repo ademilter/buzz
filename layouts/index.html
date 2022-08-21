@@ -1,24 +1,7 @@
 {{ define "main" }}
   <div class="space-y-6 p-5">
     {{ range where .Site.RegularPages "Type" "posts" }}
-      <article class="">
-        <h1 class="text-xl font-bold">
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h1>
-
-        <div class="flex gap-4">
-          <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
-          <span>{{ .WordCount }} Words</span>
-        </div>
-
-        <p>{{ .Summary }}</p>
-
-        {{ if .Truncated }}
-          <div class="text-blue-500 underline">
-            <a href="{{ .RelPermalink }}">Read More…</a>
-          </div>
-        {{ end }}
-      </article>
+      {{ .Render "summary" }}
     {{ end }}
   </div>
 {{ end }}

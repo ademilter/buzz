@@ -1,6 +1,7 @@
 ---
 title: "Post - 1"
 date: 2022-08-20T22:41:07+03:00
+tags: [deneme, test]
 ---
 
 Splitting the text by one or more consecutive whitespace characters.
