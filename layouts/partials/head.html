@@ -1,32 +1,47 @@
 <!DOCTYPE html>
-<html {{with .Site.LanguageCode}} lang="{{.}}" {{end}}>
+<html {{ with $.Site.LanguageCode }}lang="{{ . }}"{{ end }}>
+  <head>
+    <meta charset="utf-8" />
+    {{ hugo.Generator }}
 
-<head>
-  <meta charset="utf-8">
-  {{ hugo.Generator }}
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  {{ if .IsHome }}
-    <title>{{ $.Site.Title }}</title>
-  {{ else }}
-    <title>{{ .Title }} &middot; {{ $.Site.Title }}</title>
-  {{ end }}
+    {{ if .IsHome }}
+      <title>{{ $.Site.Title }}</title>
+    {{ else }}
+      <title>{{ .Title }} &middot; {{ $.Site.Title }}</title>
+    {{ end }}
 
-  <meta name="description" content="{{ default $.Site.Params.description .Params.description }}" />
 
-  <!-- css -->
-  <link type="text/css" rel="stylesheet" href="{{ $.Site.BaseURL }}style.css">
-  {{ partial "head_fonts.html" . }}
+    <meta
+      name="description"
+      content="{{ default $.Site.Params.description .Params.description }}"
+    />
 
-  <!-- icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
+    <!-- css -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{{ $.Site.BaseURL }}style.css"
+    />
+    {{ partial "head_fonts.html" . }}
 
-  <!-- rss etc -->
-  {{ range .AlternativeOutputFormats }}
-  {{ printf `
-  <link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
-  {{ end }}
 
-</head>
+    <!-- icons -->
+    <link
+      rel="apple-touch-icon-precomposed"
+      sizes="144x144"
+      href="/apple-touch-icon-144-precomposed.png"
+    />
+    <link rel="shortcut icon" href="/favicon.png" />
+
+    <!-- rss etc -->
+    {{ range .AlternativeOutputFormats }}
+      {{ printf `
+        <link href="%s" rel="%s" type="%s" title="%s" />
+        ` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML
+      }}
+    {{ end }}
+  </head>
+</html>

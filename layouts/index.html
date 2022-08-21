@@ -1,27 +1,23 @@
 {{ define "main" }}
+  <div class="bg-blue-50 p-5">
+    <mark>index</mark>
 
+    {{ $t := .Site.GetPage "/posts" }}
+    {{ range $t.Pages }}
+      <article class="post">
+        <h1 class="post-title">
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </h1>
 
+        <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
 
-<div class="p-5 bg-blue-50">
-  <mark>index</mark>
-
-  {{ $t := .Site.GetPage "/posts" }}
-  {{ range $t.Pages }}
-  <article class="post">
-    <h1 class="post-title">
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h1>
-
-    <span>{{ .Date.Format "Mon Jan 2, 2006" }}</span>
-
-    {{ .Summary }}
-
-    {{ if .Truncated }}
-    <div class="read-more-link">
-      <a href="{{ .RelPermalink }}">Read More…</a>
-    </div>
+        {{ .Summary }}
+        {{ if .Truncated }}
+          <div class="read-more-link">
+            <a href="{{ .RelPermalink }}">Read More…</a>
+          </div>
+        {{ end }}
+      </article>
     {{ end }}
-  </article>
-  {{ end }}
-</div>
+  </div>
 {{ end }}

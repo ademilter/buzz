@@ -1,7 +1,6 @@
 {{ define "main" }}
-
-<article class="p-5 bg-indigo-100">
-  <mark>posts/single</mark>
+  <article class="bg-indigo-100 p-5">
+    <mark>posts/single</mark>
 
     <header>
       <h1>{{ .Title }}</h1>
@@ -12,10 +11,6 @@
       <span>{{ .WordCount }} Words</span>
     </header>
 
-    <div class="post-body font-serif">
-      {{ .Content }}
-    </div>
-
-</article>
-
+    <div class="post-body font-serif">{{ .Content }}</div>
+  </article>
 {{ end }}

@@ -1,21 +1,21 @@
 <aside class="bg-gray-100 p-5">
- 
-    <div class="">
-      <a href="{{ .Site.BaseURL }}">
-        <h1>{{ .Site.Title }}</h1>
-      </a>
-      <p class="lead">
-        {{ with .Site.Params.description }}{{.}}{{ else }}test{{end}}
-      </p>
-    </div>
 
-    <!-- <nav>
-      <ul class="sidebar-nav">
-        <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
-        {{ range .Site.Menus.main -}}
-        <li><a href="{{.URL}}"> {{ .Name }} </a></li>
-        {{- end }}
-      </ul>
-    </nav> -->
+  <div class="">
+    <a href="{{ .Site.BaseURL }}">
+      <h1>{{ .Site.Title }}</h1>
+    </a>
+    <p class="lead">
+      {{ with .Site.Params.description }}{{.}}{{ else }}test{{end}}
+    </p>
+  </div>
+
+  <!-- <nav>
+    <ul class="sidebar-nav">
+      <li><a href="{{ .Site.BaseURL }}">Home</a> </li>
+      {{ range .Site.Menus.main -}}
+      <li><a href="{{.URL}}"> {{ .Name }} </a></li>
+      {{- end }}
+    </ul>
+  </nav> -->
   </div>
 </aside>

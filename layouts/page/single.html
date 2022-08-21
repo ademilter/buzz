@@ -1,17 +1,9 @@
 {{ define "main" }}
+  <div class="bg-red-50">
+    <h1 class="">{{ .Title }}</h1>
 
-<div class="bg-red-50">
- 
-  <h1 class="">
-    {{ .Title }}
-  </h1>
+    <div class="">{{ .Content }}</div>
 
-  <div class="">
-    {{ .Content }}
+    {{ $.Param "text_color" | default "mid-gray" }}
   </div>
-
-  {{ $.Param "text_color" | default "mid-gray" }}
-
-</div>
-
 {{ end }}

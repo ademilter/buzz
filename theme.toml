@@ -6,7 +6,7 @@ description = "An elegant open source and mobile first theme"
 demosite = "https://buzz-theme.vercel.app"
 tags = ["minimal", "clean", "responsive", "simple", "portfolio"]
 features = ["blog", "themes"]
-min_version = 0.0.1
+min_version = "0.0.1"
 
 [author]
     name = "Adem ilter"

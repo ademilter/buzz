@@ -714,6 +714,13 @@ postcss@^8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+prettier-plugin-go-template@^0.0.13:
+  version "0.0.13"
+  resolved "https://registry.yarnpkg.com/prettier-plugin-go-template/-/prettier-plugin-go-template-0.0.13.tgz#b4047bce76430bc89a8ee8f27fad1b1c14d942be"
+  integrity sha512-gG/xT5kd+kCzoMaTchXvdfBdsunyRCV6G8cgdPGPd2V5JGGKXUG7SjzBKU7jaGh2RTeblcAdBb/E+S/duOAMsA==
+  dependencies:
+    ulid "^2.3.0"
+
 prettier-plugin-tailwindcss@^0.1.13:
   version "0.1.13"
   resolved "https://registry.yarnpkg.com/prettier-plugin-tailwindcss/-/prettier-plugin-tailwindcss-0.1.13.tgz#ca1071361dc7e2ed5d95a2ee36825ce45f814942"
@@ -927,6 +934,11 @@ to-regex-range@^5.0.1:
   integrity sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ==
   dependencies:
     is-number "^7.0.0"
+
+ulid@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ulid/-/ulid-2.3.0.tgz#93063522771a9774121a84d126ecd3eb9804071f"
+  integrity sha512-keqHubrlpvT6G2wH0OEfSW4mquYRcbe/J8NMmveoQOjUqmo+hXtO+ORCpWhdbZ7k72UtY61BL7haGxW6enBnjw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
