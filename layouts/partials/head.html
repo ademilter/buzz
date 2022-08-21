@@ -8,15 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {{ if .IsHome }}
-    <title>{{ .Site.Title }}</title>
+    <title>{{ $.Site.Title }}</title>
   {{ else }}
-    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+    <title>{{ .Title }} &middot; {{ $.Site.Title }}</title>
   {{ end }}
 
-  <meta name="description" content="{{ default .Site.Params.description .Params.description }}" />
+  <meta name="description" content="{{ default $.Site.Params.description .Params.description }}" />
 
   <!-- css -->
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
+  <link type="text/css" rel="stylesheet" href="{{ $.Site.BaseURL }}style.css">
   {{ partial "head_fonts.html" . }}
 
   <!-- icons -->
