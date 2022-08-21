@@ -13,10 +13,10 @@
     <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
   {{ end }}
 
-  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+  <meta name="description" content="{{ default .Site.Params.description .Params.description }}" />
 
   <!-- css -->
-  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}/style.css">
+  <link type="text/css" rel="stylesheet" href="{{ .Site.BaseURL }}style.css">
   {{ partial "head_fonts.html" . }}
 
   <!-- icons -->
@@ -28,4 +28,5 @@
   {{ printf `
   <link href="%s" rel="%s" type="%s" title="%s" />` .Permalink .Rel .MediaType.Type $.Site.Title | safeHTML }}
   {{ end }}
+
 </head>

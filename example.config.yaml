@@ -1,0 +1,15 @@
+baseURL: https://buzz.vercel.app
+languageCode: en-us
+title: Buzz Hugo Theme
+theme: buzz
+googleAnalytics: Your tracking code
+
+params
+  description: An elegant open source and mobile first theme
+  socials:
+      - name: github
+        url: https://github.com/ademilter
+      - name: instagram
+        url: https://instagram.com/ademilter
+      - name: twitter
+        url: https://twitter.com/ademilter

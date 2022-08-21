@@ -1,5 +1,6 @@
 {{ define "main" }}
-<div class="posts">
+
+<div class="bg-red-50">
  
   <h1 class="">
     {{ .Title }}
@@ -12,4 +13,5 @@
   {{ $.Param "text_color" | default "mid-gray" }}
 
 </div>
+
 {{ end }}

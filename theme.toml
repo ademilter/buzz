@@ -1,11 +1,13 @@
 name = "buzz"
 license = "MIT"
 licenselink = "https://github.com/ademilter/buzz/blob/master/LICENSE.md"
+homepage = "https://github.com/ademilter/buzz"
 description = "An elegant open source and mobile first theme"
-tags = ["blog"]
+demosite = "https://buzz.vercel.app"
+tags = ["minimal", "clean", "responsive", "simple", "portfolio"]
 features = ["blog", "themes"]
-min_version = 0.1
+min_version = 0.0.1
 
 [author]
-    name = "ademilter"
+    name = "Adem ilter"
     homepage = "https://ademilter.com"

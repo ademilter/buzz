@@ -1,6 +1,7 @@
 {{ define "main" }}
 <ul class="posts">
   {{ range .Pages }}
+  <div>++</div>
     {{ .Render "summary"}}
   {{ end }}
 </ul>
