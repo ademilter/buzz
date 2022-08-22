@@ -1,7 +1,7 @@
 {{ define "main" }}
-  <p>
+  <div class="text-xl leading-normal">
     {{ .Content }}
-  </p>
+  </div>
 
   <div class="mt-10 space-y-6">
     {{ range where .Site.RegularPages "Type" "posts" }}

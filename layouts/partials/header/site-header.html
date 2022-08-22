@@ -1,12 +1,12 @@
-<header class="mb-10 pt-4">
+<header class="mb-10 border-b py-4">
   <div class="mx-auto max-w-screen-md px-6">
-    <h1>
+    <h1 class="font-bold">
       <a href="{{ .Site.BaseURL }}">
         {{ .Site.Title }}
       </a>
     </h1>
 
-    <p class="lead">
+    <p class="lead opacity-50">
       {{ with .Site.Params.description }}
         {{ . }}
       {{ else }}

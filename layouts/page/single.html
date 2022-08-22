@@ -1,9 +1,9 @@
 {{ define "main" }}
   <div>
-    <h1 class="">{{ .Title }}</h1>
+    <h1 class="text-2xl font-bold">{{ .Title }}</h1>
 
-    <div class="">{{ .Content }}</div>
+    <div class="mt-2">{{ .Content }}</div>
 
-    {{ $.Param "text_color" | default "mid-gray" }}
+    {{ $.Param "text_color" | default "red" }}
   </div>
 {{ end }}
