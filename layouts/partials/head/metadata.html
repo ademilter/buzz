@@ -1,0 +1,68 @@
+{{ hugo.Generator }}
+
+
+<link
+  rel="preload"
+  href="{{ $.Site.BaseURL }}Manrope[wght].woff2"
+  as="font"
+  type="font/woff2"
+  crossorigin="anonymous"
+/>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<link rel="canonical" href="{{ .Permalink }}" />
+<title>
+  {{- block "title" . }}
+    {{- with .Params.Title }}
+      {{- . -}}
+      |
+    {{ end -}}
+    {{- .Site.Title -}}
+  {{ end -}}
+</title>
+<meta
+  name="description"
+  content="{{- with .Description }}
+    {{ . }}
+  {{ else }}
+    {{- if .IsPage }}
+      {{- .Summary -}}
+    {{ else }}
+      {{- with .Site.Params.description }}{{ . }}{{ end -}}
+    {{ end -}}
+  {{ end -}}
+  "
+/>
+
+{{ $production := eq (getenv "HUGO_ENV") "production" | or (eq site.Params.env "production") }}
+{{ $public := not .Params.private }}
+{{ if and $production $public }}
+  <meta name="robots" content="index, follow" />
+{{ else }}
+  <meta name="robots" content="noindex, nofollow" />
+{{ end }}
+
+
+<link href="/favicon.png" rel="icon" sizes="32x32" type="image/png" />
+<link type="text/css" rel="stylesheet" href="/style.css" />
+
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/schema.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+
+{{ if .OutputFormats.Get "rss" }}
+  {{ with .OutputFormats.Get "rss" }}
+    <link
+      rel="{{ .Rel }}"
+      type="{{ .MediaType.Type }}"
+      href="{{ .Permalink }}"
+      title="{{ $.Site.Title | safeHTML }}"
+    />
+  {{ end }}
+{{ end }}
+
+{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
+  {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}

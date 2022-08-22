@@ -1,5 +1,9 @@
 {{ define "main" }}
-  <div class="space-y-6">
+  <p>
+    {{ .Content }}
+  </p>
+
+  <div class="mt-10 space-y-6">
     {{ range where .Site.RegularPages "Type" "posts" }}
       {{ .Render "summary" }}
     {{ end }}

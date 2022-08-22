@@ -1,0 +1,12 @@
+{{ $currentPage := . }}
+{{ range .Site.Menus.main }}
+  {{ $active := $currentPage.IsMenuCurrent "main" . }}
+  <a
+    class="hover-white white-90 {{ with $active }}
+      opacity-50
+    {{ end }} no-underline"
+    href="{{ .URL }}"
+  >
+    {{ .Name }}
+  </a>
+{{ end }}

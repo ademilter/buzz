@@ -1,17 +1,20 @@
-{{ partial "head.html" . }}
+<!DOCTYPE html>
+<html
+  {{ with $.Site.LanguageCode }}lang="{{ . }}"{{ end }}
+  class="scroll-smooth text-lg antialiased dark:bg-zinc-900 dark:text-zinc-100"
+>
+  <head>
+    {{ partial "head/metadata.html" . }}
+  </head>
 
-<body>
-{{ partial "header.html" . }}
+  <body>
+    {{ partial "header/site-header.html" . }}
 
-<div class="mx-auto max-w-screen-md px-6">
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-</div>
 
-{{ if not .Site.IsServer }}
-{{ template "_internal/google_analytics_async.html" . }}
-{{ end }}
-</body>
-
+    <div class="mx-auto max-w-screen-md px-6">
+      <main>
+        {{ block "main" . }}{{ end }}
+      </main>
+    </div>
+  </body>
 </html>
