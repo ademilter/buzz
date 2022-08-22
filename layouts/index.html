@@ -4,7 +4,7 @@
   </div>
 
   <div class="mt-10 space-y-6">
-    {{ range where .Site.RegularPages "Type" "posts" }}
+    {{ range where .Site.RegularPages "Type" "post" }}
       {{ .Render "summary" }}
     {{ end }}
   </div>

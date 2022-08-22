@@ -1234,8 +1234,32 @@ html {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 .max-w-screen-md {
   max-width: 768px;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.grid-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .gap-4 {
@@ -1346,5 +1370,17 @@ html {
   .dark\:text-zinc-100 {
     --tw-text-opacity: 1;
     color: rgb(244 244 245 / var(--tw-text-opacity));
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:-mx-40 {
+    margin-left: -10rem;
+    margin-right: -10rem;
+  }
+
+  .sm\:-mx-60 {
+    margin-left: -15rem;
+    margin-right: -15rem;
   }
 }

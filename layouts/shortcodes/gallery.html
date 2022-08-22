@@ -1,0 +1,16 @@
+{{ $col := .Get "col" }}
+{{ $layout := .Get "layout" | default "normal" }}
+{{ $isLayoutNormal := eq $layout "normal" }}
+{{ $isLayoutOut := eq $layout "out" }}
+{{ $isLayoutFull := eq $layout "full" }}
+
+
+<div
+  class="{{ if $isLayoutOut -}}
+    sm:-mx-40
+  {{- end }}{{ if $isLayoutFull -}}
+    sm:-mx-60
+  {{- end }} grid-cols-{{ $col }} grid gap-4"
+>
+  {{ .Inner }}
+</div>

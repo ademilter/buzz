@@ -3,7 +3,14 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   darkMode: "media",
-  content: ["content/**/*.md", "layouts/**/*.html"],
+  content: {
+    files: ["content/**/*.md", "layouts/**/*.html"],
+  },
+  safelist: [
+    {
+      pattern: /grid-cols-(2|3|4|5|6)/,
+    },
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -13,7 +20,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    // require("@tailwindcss/forms"),
     require("@tailwindcss/line-clamp"),
+    // require("@tailwindcss/forms"),
   ],
 };

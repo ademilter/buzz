@@ -3,7 +3,7 @@
     "dev:css": "npx tailwindcss -i ./assets/main.css -o static/style.css -w",
     "dev:hugo": "hugo server -D --ignoreCache",
     "dev": "run-p dev:*",
-    "build:css": "NODE_ENV=production npx tailwindcss -i ./assets/main.css -o static/style.css -m",
+    "build:css": "NODE_ENV=production npx tailwindcss -i ./assets/main.css -o static/style.css --minify",
     "build:hugo": "hugo --gc",
     "build": "run-s build:*"
   },
